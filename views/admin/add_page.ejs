@@ -1,0 +1,20 @@
+<%- include('../_layouts/admin-header'); %>
+    <h2 class="title"> Tambah Halaman</h2>
+    <a href="/admin" class="btn btn-primary">kembali</a>
+    <br/>
+    <form action="/admin/pages/add-page">
+        <div class="form-group">
+            <label for="">title</label>
+            <input class="form-control" type="text" name="title" value="<%= title %>" placeholder="Title">
+        </div>
+        <div class="form-group">
+            <label for="">slug</label>
+            <input class="form-control" type="text" name="slug" value="<%= slug %>" placeholder="Slug">
+        </div>
+        <div class="form-group">
+            <label for="">content</label>
+            <textarea class="form-control"  cols="10" rows="20" type="text" name="content" value="<%= content %>"></textarea>
+        </div>
+        <button class="btn btn-primary">submit</button>
+    </form>
+<%- include('../_layouts/admin-footer'); %>
